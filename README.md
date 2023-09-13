@@ -92,3 +92,35 @@ Si ya hiciste lo anterior, ahora refresca la página y verás lo siguiente:
 Si has hecho bien todos los pasos, verás este bonito CHECKER personalizado con todos tus datos!
 
 ![FINAL](capturas/8.png)
+
+# Preguntas Frecuentes:
+
+## ¿ CÓMO EDITAR LOS ICONOS Y LOGOS?
+
+Cómo pudiste observar, en las líneas **21 y 41** hay archivos **.svg** cuyos nombres son `cc.svg`.
+
+`cc.svg` es el que se muestra en la pestaña del navegador y dentro del generador, el logo principal. Pero puedes usar diferentes logos para ambas cosas. Incluso, usar PNG. Por ejemplo: `logo.png`.
+
+Para editarlos, debes ir a la carpeta `assets`, luego entrar a la carpeta `img` y dentro de ahí **borrar las imagenes**. Luego debes subir las tuyas con los mismos nombres.
+
+![enter image description here](capturas/imgs.png)
+
+## ¿CÓMO VOLVER A MODIFICAR LOS NOMBRES?
+
+Si quieres modificar algún dato, debes volver a editar el archivo HTML siempre y cuando **NO MODIFIQUES NADA QUE SEA LO YA MENCIONADO EN ESTE TUTORIAL.**
+
+# Créditos:
+
+Todo el desarrollo, modificación, colores, y **tiempo** fueron con dedicación por **[Sergio Yael Massieu](https://www.facebook.com/is.leay)**, dueño de [**Stery**](https://stery.us) y programador en ratos libres. Siempre he pensado que si hay conocimiento, hay que esparcirlo al resto de personas, no nos quita nada compartir con los demás.
+
+Si llegaste hasta aquí, muchas gracias. Si quieres realizar una donación o un reconocimiento, puedes escribirme al correo:
+yaeldev@tutanota.com
+
+**De nuevo gracias y espero valoren el esfuerzo y tiempo que me tomó hacer todo esto para ustedes** 💕
+
+Mis otras redes:
+
+ - **[Telegram](https://t.me/tools)**
+ - [**Instagram**](https://instagram.com/is.leay)
+  - [**Github**](https://github.com/yaelsito)
+  - [**Twitter**](https://twitter.com/is_leay)
