@@ -1,11 +1,74 @@
-# BIENVENIDO A YAELCHECKER
+# BIENVENIDO A YaelChecker
 
-Con YAELCHECKER podrás tener tu propio generador de tarjetas personalizado y online con **Github Pages.**
+Con YaelChecker podrás tener tu propio generador de tarjetas personalizado y online con **Github Pages.**
 
 ## PREVIEW de como quedaría:
 ![enter image description here](capturas/final.png)
 
-# TUTORIAL
+
+## Cómo funciona el API?
+
+#### Hacer peticiones:
+
+```http
+  POST https://freeapi.stery.us/api/checarCC
+```
+
+| Parámetro | Tipo     | Descripción                |
+| :-------- | :------- | :------------------------- |
+| `tarjetas` | `string` | **FORMATO:** `tarjeta-mes-año-cvv` |
+
+#### LIMITACIONES:
+
+| Solicitudes/Día | Tarjetas/Solicitud     | Descripcion:                       |
+| :-------- | :------- | :-------------------------------- |
+| `10`      | `20` | Uso gratuito |
+
+#### Descripción detallada:
+Solo se permiten 10 solicitudes diarias con 20 tarjetas máximo por solicitud. Si la solicitud está vacía, cuenta como una solicitud correcta.
+
+## Cómo hacer una petición (Javascript)
+
+```javascript
+const respuesta = await fetch("https://freeapi.stery.us/api/checarCC", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(tarjetas),
+    });
+    const datos = await respuesta.json();
+```
+
+
+## Obtener tarjetas:
+
+Se puede usar un ciclo FOR para hacerlo.
+
+```javascript
+  for (const detalles in datos) {
+        const tarjetas = datos[detalles];
+        for (const tarjeta of tarjetas) {
+          const resultado = `<p>
+            ${detalles}:
+            Tarjeta: ${tarjeta.ccNum},
+            Mes: ${tarjeta.ccMes},
+            Año: ${tarjeta.ccAnio},
+            CCV: ${tarjeta.ccCodigo}
+            </p>`;
+          datosDiv.innerHTML += resultado;
+        }
+      }
+```
+    
+## Propiedades del API disponibles:
+
+- `ccNum`
+- `ccMes`
+- `ccAnio`
+- `ccCodigo`
+
+# TUTORIAL (PARA PRINCIPIANTES)
 
 ¿No tienes experiencia en programación? No importa, es sencillo. Primero debes crear tu cuenta de Github. Simplemente registrate en "Signup".
 
